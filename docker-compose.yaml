@@ -10,12 +10,8 @@ services:
       - "80:80"
     depends_on:
       - backend
-    networks:
-      - dev
   backend:
     container_name: backend
     build: ./backend
     env_file:
       - ./backend/.env
-    networks:
-      - dev
